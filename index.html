@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Seating Chart</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        h1 {
+            text-align: center;
+            font-weight: 600;
+            color: #5b2c6f;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+        #search-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #search-input {
+            width: 80%;
+            max-width: 400px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        #seating-chart {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            justify-items: center;
+            padding: 20px;
+        }
+        .table {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 250px;
+            text-align: left;
+            transition: transform 0.3s;
+        }
+        .table:hover {
+            transform: scale(1.05);
+        }
+        .table h2 {
+            margin: 0;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+            color: #5b2c6f;
+            text-align: center;
+        }
+        .guest-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .guest-list li {
+            margin: 5px 0;
+            font-size: 1em;
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+            padding-left: 10px;
+        }
+        .guest-list li:last-child {
+            border-bottom: none;
+        }
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 2em;
+            }
+        }
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            .table {
+                max-width: 200px;
+                padding: 15px;
+            }
+            .table h2 {
+                font-size: 1.2em;
+            }
+            .guest-list li {
+                font-size: 0.9em;
+            }
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.2em;
+            }
+            #search-input {
+                width: 100%;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Wedding Seating Chart</h1>
+    <div id="search-container">
+        <input type="text" id="search-input" placeholder="Search for your name...">
+    </div>
+    <div id="seating-chart"></div>
+    <script src="seating_chart.js"></script>
+</body>
+</html>
