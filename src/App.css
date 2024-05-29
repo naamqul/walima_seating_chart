@@ -1,38 +1,163 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f8f9fa; /* Light pastel background */
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  min-height: 100vh; /* Ensure the background color covers the whole page */
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-weight: 600;
+  color: #6d597a; /* Subtle pastel purple */
+  margin-bottom: 20px;
+  font-size: 2.5em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 2em;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (max-width: 992px) {
+  h1 {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2em;
+  }
+}
+
+.search-container {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-input {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .search-input {
+    width: 100%;
+    padding: 8px;
+  }
+}
+
+.seating-chart {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.table {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 250px; /* Ensures uniform width */
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: auto; /* Ensure the height adjusts to the content */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
-.App-link {
-  color: #61dafb;
+.table:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.table h2 {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 1.4em;
+  color: #6d597a;
+  text-align: center;
+  flex: 0 0 auto; /* Prevent the header from stretching */
+  width: 100%;
+}
+
+.guest-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  flex: 1 1 auto; /* Allow the guest list to stretch */
+}
+
+.guest-list li {
+  margin: 5px 0;
+  font-size: 1em; /* Fixed font size to avoid truncation */
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+  padding-left: 10px;
+  white-space: normal; /* Ensure text wraps */
+  overflow: visible; /* Ensure text is visible */
+  text-overflow: clip; /* Ensure text does not get clipped */
+  text-align: left; /* Ensure left alignment */
+  word-break: break-word; /* Ensure long words break properly */
+}
+
+.guest-list li:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 992px) {
+  .guest-list li {
+    font-size: 0.9em; /* Slightly smaller font size for smaller screens */
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 768px) {
+  .guest-list li {
+    font-size: 0.8em; /* Slightly smaller font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .guest-list li {
+    font-size: 0.7em; /* Slightly smaller font size for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .seating-chart {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ensure at least 3 columns on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .seating-chart {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Ensure at least 3 columns on mobile */
   }
 }
