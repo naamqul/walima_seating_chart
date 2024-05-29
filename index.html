@@ -35,10 +35,9 @@
         }
         #seating-chart {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 30px;
             justify-items: center;
-            padding: 20px;
         }
         .table {
             background-color: #fff;
@@ -49,6 +48,7 @@
             max-width: 250px;
             text-align: left;
             transition: transform 0.3s;
+            margin: 15px;
         }
         .table:hover {
             transform: scale(1.05);
@@ -107,6 +107,14 @@
             #search-input {
                 width: 100%;
                 padding: 8px;
+            }
+            #seating-chart {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 20px;
+            }
+            .table {
+                max-width: 180px;
+                padding: 10px;
             }
         }
     </style>
