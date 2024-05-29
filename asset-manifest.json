@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/walima_seating_chart/static/css/main.1ba16c9a.css",
+    "main.js": "/walima_seating_chart/static/js/main.83a35e85.js",
+    "static/js/453.f3fe243d.chunk.js": "/walima_seating_chart/static/js/453.f3fe243d.chunk.js",
+    "index.html": "/walima_seating_chart/index.html",
+    "main.1ba16c9a.css.map": "/walima_seating_chart/static/css/main.1ba16c9a.css.map",
+    "main.83a35e85.js.map": "/walima_seating_chart/static/js/main.83a35e85.js.map",
+    "453.f3fe243d.chunk.js.map": "/walima_seating_chart/static/js/453.f3fe243d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1ba16c9a.css",
+    "static/js/main.83a35e85.js"
+  ]
+}
